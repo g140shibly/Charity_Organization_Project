@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charity Organizations Information</title>
+</head>
+<body>
+  <h1>Add New Record</h1>
+  <form method="post"action="/create">
+      {%csrf_token%}
+      <div>
+          <label>Charity Organizations Name</label>
+          {{form.org_name}}
+      </div>
+      <div>
+          <label>Charity Method</label>
+          {{form.method}}
+      </div>
+      <div>
+          <label>Organizations Email</label>
+          {{form.email}}
+      </div>
+      <div>
+          <label>Navigation_Factor(%)</label>
+          {{form.nav_factor}}
+      </div>
+      <br>
+      <div>
+          <button type="submit">submit</button>
+      </div>
+  </form>
+</body>
+</html>

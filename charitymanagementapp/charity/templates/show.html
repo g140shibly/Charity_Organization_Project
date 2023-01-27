@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Charity Organizations Information</title>
+</head>
+<body>
+  <a href="/create">
+    <button>Add Charity Organization</button>
+  </a>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th style="border:1px solid green">Charity Organizations Name</th>
+        <th style="border:1px solid green">Charity Method</th>
+        <th style="border:1px solid green">Organizations Email</th>
+        <th style="border:1px solid green">Navigation_Factor(%)</th>
+        <th style="border:1px solid green">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    {%for charity in charities%}
+    <tr>
+      <td style="border:1px solid green">{{charity.org_name}}</td>
+      <td style="border:1px solid green">{{charity.method}}</td>
+      <td style="border:1px solid green">{{charity.email}}</td>
+      <td style="border:1px solid green">{{charity.nav_factor}}</td>
+      <td style="border:1px solid green">
+        <a href="/edit/{{charity.id}}">Edit</a>
+        <a href="/delete/{{charity.id}}">Delete</a>
+      </td>
+    </tr>
+    {%endfor%}
+    </tbody>
+  </table>
+</body>
+</html>
